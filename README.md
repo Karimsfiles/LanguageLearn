@@ -34,11 +34,10 @@ python manage.py createsuperuser  # для админки
 python manage.py runserver
 
 
-## 📸 Скриншоты
 
-![Главная страница](./screenshots/main.png)
 
-![Cтраница случайных слов](./screenshots/randomword.png)
-
-![Карточка слова](./screenshots/wordcard.png)
-
+<div align="center">
+  <img src="./screenshots/main.png" width="45%" alt="Главная страница">
+  <img src="./screenshots/randomword.png" width="45%" alt="Cтраница случайных слов">
+  <img src="./screenshots/wordcard.png" width="45%" alt="Карточка слова">
+</div>
