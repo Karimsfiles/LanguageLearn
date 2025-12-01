@@ -37,8 +37,8 @@ python manage.py runserver
 
 ## 📸 Скриншоты
 
-![Главная страница](screenshots/main.png)
+![Главная страница](https://raw.githubusercontent.com/ВАШ_USERNAME/ВАШ_РЕПОЗИТОРИЙ/main/screenshots/main.png)
 
-![Cтраница случайных слов](screenshots/randomword.png)
+![Cтраница случайных слов](https://raw.githubusercontent.com/ВАШ_USERNAME/ВАШ_РЕПОЗИТОРИЙ/main/screenshots/randomword.png)
 
-![Карточка слова](screenshots/wordcard.png)
+![Карточка слова](https://raw.githubusercontent.com/ВАШ_USERNAME/ВАШ_РЕПОЗИТОРИЙ/main/screenshots/wordcard.png)
