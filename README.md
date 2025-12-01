@@ -51,10 +51,3 @@ python manage.py runserver
 
 
 
-## 📸 Скриншоты
-
-![Главная страница](https://github.com/Karimsfiles/LanguageLearn/blob/main/screenshots/main.png?raw=true)
-
-![Cтраница случайных слов](https://github.com/Karimsfiles/LanguageLearn/blob/main/screenshots/randomword.png?raw=true)
-
-![Карточка слова](https://github.com/Karimsfiles/LanguageLearn/blob/main/screenshots/wordcard.png?raw=true)
