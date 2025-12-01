@@ -1,5 +1,10 @@
 # 🗣️ Vocabulary Learner
 
+![Django](https://img.shields.io/badge/Django-4.2-green)
+![Python](https://img.shields.io/badge/Python-3.8+-blue)
+![GitHub](https://img.shields.io/badge/GitHub-Repository-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 Веб-приложение на Django для изучения иностранных слов.
 
 ## ✨ Возможности
@@ -37,8 +42,8 @@ python manage.py runserver
 
 ## 📸 Скриншоты
 
-![Главная страница](https://github.com/Karimsfiles/LanguageLearn/blob/main/screenshots/main.png)
+![Главная страница](https://github.com/Karimsfiles/LanguageLearn/blob/main/screenshots/main.png?raw=true)
 
-![Cтраница случайных слов](https://github.com/Karimsfiles/LanguageLearn/blob/main/screenshots/randomword.png)
+![Cтраница случайных слов](https://github.com/Karimsfiles/LanguageLearn/blob/main/screenshots/randomword.png?raw=true)
 
-![Карточка слова](https://github.com/Karimsfiles/LanguageLearn/blob/main/screenshots/wordcard.png)
+![Карточка слова](https://github.com/Karimsfiles/LanguageLearn/blob/main/screenshots/wordcard.png?raw=true)
