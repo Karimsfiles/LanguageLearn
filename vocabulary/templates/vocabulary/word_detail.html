@@ -1,0 +1,51 @@
+{% extends 'vocabulary/base.html' %}
+
+{% block title %}{{ word.original_word }} - Словарь{% endblock %}
+
+{% block content %}
+<div class="word-card">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <div style="flex: 1;">
+            <div class="word-original">{{ word.original_word }}</div>
+            <div class="word-translation">{{ word.translation }}</div>
+            <div class="word-languages">
+                {{ word.language_from }} → {{ word.language_to }}
+            </div>
+        </div>
+
+        {% if user.is_authenticated %}
+            <button class="favorite-btn {% if is_favorite %}active{% endif %}"
+                    data-word-id="{{ word.id }}">
+                {% if is_favorite %}
+                    ❤️
+                {% else %}
+                    🤍
+                {% endif %}
+            </button>
+        {% endif %}
+    </div>
+
+    {% if word.example_sentence %}
+        <div class="example-sentence">
+            <strong>Пример использования:</strong><br>
+            {{ word.example_sentence }}
+        </div>
+    {% else %}
+        <div class="example-sentence warning-box">
+            <strong>Пример использования отсутствует</strong><br>
+            Добавьте пример предложения через админ-панель
+        </div>
+    {% endif %}
+
+    {% if word.added_by %}
+        <div style="margin-top: 1rem; color: #7f8c8d; font-size: 0.9rem;">
+            Добавлено пользователем: {{ word.added_by.username }}
+        </div>
+    {% endif %}
+</div>
+
+<div class="action-buttons">
+    <a href="{% url 'vocabulary:word_list' %}" class="btn">Назад к списку</a>
+    <a href="{% url 'vocabulary:random_word' %}" class="btn">Случайное слово</a>
+</div>
+{% endblock %}

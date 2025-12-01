@@ -1,0 +1,48 @@
+### ПАЙТОН ###
+# Файлы Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+
+# Виртуальное окружение
+venv/
+env/
+ENV/
+.env
+.venv
+
+# Django
+*.log
+*.pot
+*.pyc
+db.sqlite3          
+media/              
+
+# IDE и редакторы
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Операционные системы
+.DS_Store           # Mac
+Thumbs.db           # Windows
+desktop.ini         # Windows
+
+# Установочные файлы
+dist/
+build/
+*.egg-info/
+pip-wheel-metadata/
+
+# Тесты и покрытие
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Миграции (кроме __init__.py)
+# !vocabulary/migrations/__init__.py

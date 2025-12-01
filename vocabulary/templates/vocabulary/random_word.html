@@ -1,0 +1,89 @@
+{% extends 'vocabulary/base.html' %}
+
+{% block title %}Случайное слово - Словарь{% endblock %}
+
+{% block content %}
+<h1 xmlns:language.id>Случайное слово</h1>
+
+<!-- Форма фильтрации для случайного слова -->
+<div class="filter-form">
+    <form method="get" action="{% url 'vocabulary:random_word' %}">
+        <div class="filter-row">
+            <div class="filter-group">
+                <label for="language_from">Исходный язык:</label>
+                <select name="language_from" id="language_from">
+                    <option value="">Все языки</option>
+                    {% for language in languages %}
+                        <option value="{{ language.id }}"
+                                {% if language_from_filter == language.id|stringformat:"i" %}selected{% endif %}>
+                            {{ language.name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="language_to">Язык перевода:</label>
+                <select name="language_to" id="language_to">
+                    <option value="">Все языки</option>
+                    {% for language in languages %}
+                        <option value="{{ language.id }}"
+                                {% if language_to_filter == language.id|stringformat:"i" %}selected{% endif %}>
+                            {{ language.name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="filter-actions">
+                <button type="submit" class="btn">Применить фильтры</button>
+                <a href="{% url 'vocabulary:random_word' %}" class="btn btn-secondary">Сбросить</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% if word %}
+    <div class="word-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div style="flex: 1;">
+                <a href="{% url 'vocabulary:word_detail' word.pk %}" class="word-link">
+                    <div class="word-original">{{ word.original_word }}</div>
+                    <div class="word-translation">{{ word.translation }}</div>
+                    <div class="word-languages">
+                        {{ word.language_from }} → {{ word.language_to }}
+                    </div>
+                </a>
+            </div>
+
+            {% if user.is_authenticated %}
+                <button class="favorite-btn {% if is_favorite %}active{% endif %}"
+                        data-word-id="{{ word.id }}">
+                    {% if is_favorite %}
+                        ❤️
+                    {% else %}
+                        🤍
+                    {% endif %}
+                </button>
+            {% endif %}
+        </div>
+
+        {% if word.example_sentence %}
+            <div class="example-sentence">
+                <strong>Пример использования:</strong><br>
+                {{ word.example_sentence }}
+            </div>
+        {% endif %}
+    </div>
+{% else %}
+    <div class="no-words">
+        <h2>Слова не найдены</h2>
+        <p>Попробуйте изменить параметры фильтрации</p>
+    </div>
+{% endif %}
+
+<div class="action-buttons">
+    <a href="{% url 'vocabulary:word_list' %}" class="btn">Все слова</a>
+    <button onclick="location.reload()" class="btn">Другое слово</button>
+</div>
+{% endblock %}
