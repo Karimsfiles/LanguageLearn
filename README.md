@@ -32,3 +32,13 @@ python manage.py createsuperuser  # для админки
 
 # 5. Запустите сервер
 python manage.py runserver
+
+
+## 📸 Скриншоты
+
+![Главная страница](./screenshots/main.png)
+
+![Cтраница случайных слов](./screenshots/randomword.png)
+
+![Карточка слова](./screenshots/wordcard.png)
+
