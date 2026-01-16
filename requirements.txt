@@ -6,3 +6,4 @@ psycopg2-binary  # для PostgreSQL
 dj-database-url  # для парсинга DATABASE_URL
 gunicorn         # для продакшена
 whitenoise       # для обслуживания статики
+python-dotenv
