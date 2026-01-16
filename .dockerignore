@@ -1,0 +1,31 @@
+# Python
+pycache/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env
+venv/
+env/
+
+# Django
+*.sqlite3
+db.sqlite3
+*.log
+
+# Статика (если собирается в контейнере)
+staticfiles/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
