@@ -1,0 +1,32 @@
+{% extends 'language_learn/base.html' %}
+
+{% block content %}
+<h2>Добавить новый язык</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <div style="margin-bottom: 15px;">
+        <label>Название языка:</label>
+        {{ form.name }}
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label>Уровень владения:</label>
+        {{ form.proficiency_level }}
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label>{{ form.is_learning }} Изучаю сейчас</label>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <label>{{ form.is_native }} Родной язык</label>
+    </div>
+
+    <button type="submit" style="background: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+        Добавить язык
+    </button>
+    <a href="{% url 'language_list' %}" style="margin-left: 10px;">Отмена</a>
+</form>
+{% endblock %}

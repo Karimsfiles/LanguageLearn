@@ -35,6 +35,6 @@ EXPOSE 8000
 
 # Команда для запуска
 # Для разработки:
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "runserver", "127.0.0.1:8000"]
 # Для продакшена замените на:
-# CMD ["gunicorn", "--bind", "0.0.0.0:8000", "ваш_проект.wsgi:application"]
+# CMD ["gunicorn", "--bind", "127.0.0.1:8000", "ваш_проект.wsgi:application"]

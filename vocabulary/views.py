@@ -10,7 +10,6 @@ from django.http import JsonResponse
 from .models import Word, Language, FavoriteWord
 import random
 
-
 class WordListView(ListView):
     model = Word
     template_name = 'vocabulary/word_list.html'
@@ -182,3 +181,8 @@ def favorite_words_view(request):
     }
 
     return render(request, 'vocabulary/favorite_words.html', context)
+
+
+
+    context = {'form': form}
+    return render(request, 'language_learn/add_language.html', context)

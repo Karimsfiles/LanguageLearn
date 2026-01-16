@@ -1,6 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
+
+
+
 class Language(models.Model):
     name = models.CharField(max_length=100, verbose_name="Название языка")
     code = models.CharField(max_length=10, verbose_name="Код языка")

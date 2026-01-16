@@ -424,6 +424,8 @@
                     <a href="{% url 'vocabulary:word_list' %}">Все слова</a>
                     <a href="{% url 'vocabulary:random_word' %}">Случайное слово</a>
 
+                    <a>Добавить язык</a>
+
                     {% if user.is_authenticated %}
                         <a href="{% url 'vocabulary:favorite_words' %}">Избранное</a>
                         <div class="user-info">
